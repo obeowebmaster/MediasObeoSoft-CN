@@ -3,14 +3,16 @@ body {
     font-size: 16px;
     line-height: 1.42857143;
     color: #676767;
-    background-color: #ffffff
+    background-color: #ffffff;
+    min-height: 75rem;
+    padding-top: 4.5rem;
 }
 header {
     margin-bottom: 20px;
     background-color: #ffffff;
     border-bottom: 1px solid #dedede;
 }
-h1, h2{
+h1{
     color: #002B3C;
     font-family: "Open Sans Condensed", sans-serif;
 }
@@ -21,16 +23,11 @@ h1, h2{
     align-items: center;
     margin: auto;
 }
-.navbar-fixed-top{
-    position: fixed;
-    min-height: 80px;
-    padding: 20px 0;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030;
+a {
+    color:#fbb800; 
+    font-weight: 700; 
+    text-decoration: none;
 }
-a {color:#fbb800; font-weight: 700; text-decoration: none;}
 .btn, .btn-outline-primary:hover {
     border: 2px solid #fbb800;
     background-color: #fbb800 ; 
@@ -278,7 +275,6 @@ font-size: 25px;
     flex-wrap: nowrap;over {
     background-color: rgba(255, 255, 255, 0.9);
 }
-
 button {
     margin-top: 20px;
     padding: 10px 20px;
@@ -288,12 +284,10 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
 button:hover {
     background-color: transparent;
     color: #002B3C;
 }
-
 /* Responsive Media Queries */
 @media (max-width: 768px) {
     .modal-content {

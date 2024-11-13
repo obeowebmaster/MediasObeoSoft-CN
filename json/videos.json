@@ -77,26 +77,15 @@
     "duration": "11:49"
   },
   {
-    "title": "8分でわかるアルカディアとカペラの心意気",
-    "description": "Arcadia と Capella の簡単な紹介: 主要な概念と例。\n\n- その他のリソース: https://forum.mbse-capella.org/\n- 資力: https://www.eclipse.org/capella/resources.html\n\n今後のウェビナーに関する最新情報のソーシャル メディア:\n- LinkedIn: https://www.linkedin.com/in/capella-mbse-tool/\n- Twitter: https://twitter.com/capella_arcadia",
+    "title": "The Spirit of Arcadia and Capella in 7 minutes - ZH",
+    "description": "",
     "yt_channel_id": "@EclipseCapella",
-    "video_id": "r7e1vwsmGck",
+    "video_id": "ikPNfCZk2Qo",
     "playlist": "Getting started with Arcadia and Capella",
     "playlist_id": "PLfrEYVpSGVLz4i-rHdkgWbl5jdVzHMRUn",
-    "thumbnail": "https://i.ytimg.com/vi_webp/r7e1vwsmGck/maxresdefault.webp",
+    "thumbnail": "https://i.ytimg.com/vi_webp/ikPNfCZk2Qo/maxresdefault.webp",
     "playlist_index": 11,
     "duration": "8:28"
-  },
-  {
-    "title": "Capellaチュートリアル - ホテルのフロントベル - 日本語",
-    "description": "この動画は、Frédéric Van Lauwe氏による教育的アプローチで制作された、日本語吹き替え版のCapella MBSEツールのチュートリアルです。Capellaの基本的な操作や概念を、よりわかりやすく理解できるように工夫されています。MBSE（モデルベースシステムエンジニアリング）ツールとしてのCapellaを学びたい方、興味をお持ちの方に最適な内容です。",
-    "yt_channel_id": "@EclipseCapella",
-    "video_id": "tQZCA88_0Cc",
-    "playlist": "Getting started with Arcadia and Capella",
-    "playlist_id": "PLfrEYVpSGVLz4i-rHdkgWbl5jdVzHMRUn",
-    "thumbnail": "https://i.ytimg.com/vi_webp/tQZCA88_0Cc/sddefault.webp",
-    "playlist_index": 1,
-    "duration": "24:30"
   },
   {
     "title": "Capella an open source MBSE solution",
@@ -757,7 +746,7 @@
     "thumbnail": "zd6ea5p97NM.webp",
     "playlist_index": 52,
     "duration": "47:24"
-  }, 
+  },
   {
     "title": "Capella - Tutoriel : La Sonnette Electronique 1/2",
     "description": "Nous vous proposons de prendre 20 minutes pour une approche très pédagogique de la modélisation système sous Capella. \nNous avons choisi un modèle très simpliste de façon à prendre le temps d'expliquer les différentes phases de la modélisation.\n\n© Capella. Creative commons BY-ND Licence: Attribution + NoDerivatives",
