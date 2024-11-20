@@ -112,8 +112,6 @@
                 const videoChannelId = video.yt_channel_id;
                 let videoUrl;
                 let videoYTUrl;
-                
-                
 
                 if (videoChannelId === '@EclipseCapella') {
                     videoUrl = `https://media.obeosoft.com/capella/${videoId}.mp4`;
@@ -132,8 +130,8 @@
                     <a href="${videoUrl}"><img src="${videoThumbnailUrl}" alt="${videoTitle}"></a>
                     <p><a href="${videoUrl}">${videoTitle}</a></p>
                     <div class="row align-items-center">
-                    <div class="yt_link txt_gray1"><a href="${videoYTUrl}" target="_blank">YouTube Link</a></div>
-                    <div class="duration txt_gray1"><p>Duration: ${videoDuration}</p></div>
+                    <div class="infos txt_gray1">
+                        <i class="fa-brands fa-youtube"></i> <a href="${videoYTUrl}" target="_blank">YouTube Link</a> | <i class="fa-regular fa-clock"></i> ${videoDuration}
                     </div>
                     `;
 

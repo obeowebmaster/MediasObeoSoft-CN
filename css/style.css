@@ -39,11 +39,11 @@ a {
     border: 2px solid #fbb800;
 }
 
-.video .duration, .video .yt_link {font-size: 13px;}
-.video .yt_link a:hover {color:#fbb800;}
+.video .infos {font-size: 13px;}
+.video .infos a:hover {color:#fbb800;}
 .video a:hover, .accordion-button, .accordion-button::after {color: #fbb800;}
 h1, .video a, .accordion-button:not(.collapsed){color: #002B3C}
-.video .yt_link a {font-weight: 400; color: #ababab; text-decoration: underline;}
+.video .infos a {font-weight: 400; color: #ababab; text-decoration: underline;}
 .logo img {width: 220px;}
 
 .contact a.btn {
@@ -306,7 +306,7 @@ button:hover {
       align-items: flex-start; /* Aligne les éléments à gauche */
     }
   
-    .duration, .yt_link {
+    .infos {
       margin-bottom: 8px; /* Espace entre les éléments */
     }
   }
