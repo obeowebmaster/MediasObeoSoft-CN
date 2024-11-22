@@ -40,23 +40,20 @@
             <p>This section allows users without access to YouTube to view videos published on the <a href="https://www.youtube.com/@EclipseCapella">Capella</a> and <a href="https://www.youtube.com/user/obeocorp">Obeo</a> YouTube accounts.</p>
         </section>
         
-        <section id="videos" class="row container accordion">
+        <section id="videos" class="row container accordion accordion-flush">
         </section>
     </main>
 
-<!-- Bootstrap JavaScript (Bundle) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-
-<script>
-    function changeLanguage(lang) {
-        if (lang === 'fr') {
-            window.open('https://www.obeosoft.com/fr/', '_blank');
-        } else if (lang === 'en') {
-            window.open('https://www.obeosoft.com/en/', '_blank');
+    <script>
+        function changeLanguage(lang) {
+            if (lang === 'fr') {
+                window.open('https://www.obeosoft.com/fr/', '_blank');
+            } else if (lang === 'en') {
+                window.open('https://www.obeosoft.com/en/', '_blank');
+            }
         }
-    }
 
-    fetch('json/videos.json')
+        fetch('json/videos.json')
     .then(response => response.json())
     .then(data => {
         // Regrouper les vidéos par playlist_id
@@ -71,8 +68,8 @@
 
         const videosDiv = document.getElementById('videos');
 
-         // Correspondance entre les IDs de playlist et leurs noms
-         const playlistNames = {
+        // Correspondance entre les IDs de playlist et leurs noms
+        const playlistNames = {
             'PLfrEYVpSGVLxEFRODSWUTP8N5i3NTG4o-': 'Capella Webinars',
             'PLDCKzuGIN_ZwoohDtiavJ8E4-lfcMNeGx': 'Capella - The technology',
             'PLfrEYVpSGVLz4i-rHdkgWbl5jdVzHMRUn': 'Capella - Getting started with Arcadia and Capella',
@@ -98,52 +95,70 @@
             const accordionCollapse = document.createElement('div');
             accordionCollapse.id = `collapse-${playlistId}`;
             accordionCollapse.classList.add('accordion-collapse', 'collapse');
-            accordionCollapse.setAttribute('data-bs-parent', '#videos');
 
             const accordionBody = document.createElement('div');
-            accordionBody.classList.add('accordion-body');
+            accordionBody.classList.add('accordion-body', 'mb-5');
 
-            // Générer les vidéos à l'intérieur de l'accordéon
-            let rowDiv;
-            for (let i = 0; i < videos.length; i++) {
-                const video = videos[i];
+            // Conteneur des vidéos
+            const rowDiv = document.createElement('div');
+            rowDiv.classList.add('row', 'row-cols-1', 'row-cols-sm-2', 'row-cols-md-3', 'g-5');
+
+            // Générer les vidéos
+            videos.forEach(video => {
                 const videoId = video.video_id;
-                const playlistId = video.playlist_id;
+                const playlistName = video.playlist;
                 const videoChannelId = video.yt_channel_id;
-                let videoUrl;
-                let videoYTUrl;
-
-                if (videoChannelId === '@EclipseCapella') {
-                    videoUrl = `https://media.obeosoft.com/capella/${videoId}.mp4`;
-                } else {
-                    videoUrl = `https://media.obeosoft.com/obeo/${videoId}.mp4`;
-                }
+                const videoUrl = videoChannelId === '@EclipseCapella'
+                    ? `https://media.obeosoft.com/capella/${videoId}.mp4`
+                    : `https://media.obeosoft.com/obeo/${videoId}.mp4`;
                 const videoThumbnailUrl = `images/thumbnails/${videoId}.webp`;
                 const videoTitle = video.title;
+                const videoDescription = video.description;
                 const videoDuration = video.duration;
+                const videoYTUrl = `https://www.youtube.com/watch?v=${videoId}&list=${playlistId}`;
 
-                videoYTUrl=`https://www.youtube.com/watch?v=${videoId}&list=${playlistId}`;
-            
                 const videoElement = document.createElement('div');
-                videoElement.classList.add('video');
+                videoElement.classList.add('col');
                 videoElement.innerHTML = `
-                    <a href="${videoUrl}"><img src="${videoThumbnailUrl}" alt="${videoTitle}"></a>
-                    <p><a href="${videoUrl}">${videoTitle}</a></p>
-                    <div class="row align-items-center">
-                    <div class="infos txt_gray1">
-                        <i class="fa-brands fa-youtube"></i> <a href="${videoYTUrl}" target="_blank">YouTube Link</a> | <i class="fa-regular fa-clock"></i> ${videoDuration}
+                <div class="card h-100 shadow filter-card">
+                    <img src="${videoThumbnailUrl}" class="card-img-top img-fluid" alt="${videoTitle}" data-bs-toggle="modal" data-bs-target="#videoModal_${videoId}">
+                    <div class="card-body">
+                        <p class="card-title"><a href="${videoUrl}" data-bs-toggle="modal" data-bs-target="#videoModal_${videoId}">${videoTitle}</a></p>
+                        <div class="infos txt_gray1 d-flex justify-content-between align-items-center">
+                            <small><a href="${videoYTUrl}" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube Link</a></small>
+                            <small><i class="fa-regular fa-clock"></i> ${videoDuration}</small>
+                        </div>
                     </div>
-                    `;
-
-                if (i % 3 === 0) { // Si nous avons atteint une nouvelle ligne
-                    rowDiv = document.createElement('div');
-                    rowDiv.classList.add('row');
-                    accordionBody.appendChild(rowDiv);
-                }
-
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="videoModal_${videoId}" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header justify-content-between align-items-center">
+                                <div>
+                                    <small class="txt_gray1 d-block">${playlistName}</small>
+                                    <h5 class="modal-title" id="videoModalLabel">${videoTitle}</h5>
+                                </div>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <video controls style="width: 100%;">
+                                    <source src="${videoUrl}" type="video/mp4">
+                                    Votre navigateur ne supporte pas la lecture vidéo.
+                                </video>
+                                <section class="txt_gray">
+                                    <small class="infos mb-3 pt-3 d-block"><a href="${videoYTUrl}" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube Link</a></small>
+                                    <small>${videoDescription}</small>
+                                </section>    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                `;
                 rowDiv.appendChild(videoElement);
-            }
+            });
 
+            accordionBody.appendChild(rowDiv);
             accordionCollapse.appendChild(accordionBody);
             accordionItem.appendChild(accordionCollapse);
             videosDiv.appendChild(accordionItem);
@@ -151,7 +166,24 @@
 
     })
     .catch(error => console.error('Erreur lors du chargement du fichier JSON :', error));
-</script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+    // Écouteur d'événements pour tous les modals
+    document.querySelectorAll('.modal').forEach(modal => {
+        modal.addEventListener('hidden.bs.modal', () => {
+            // Cherche les vidéos dans le modal actuel
+            const videos = modal.querySelectorAll('video');
+            videos.forEach(video => {
+                video.pause(); // Met en pause
+                video.currentTime = 0; // Réinitialise à 0
+            });
+        });
+    });
+});
+
+    </script>
+    <!-- Bootstrap JavaScript (Bundle) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 
 </body>
 </html>
