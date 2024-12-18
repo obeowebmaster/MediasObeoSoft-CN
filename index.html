@@ -43,6 +43,10 @@
         <section id="videos" class="row container accordion accordion-flush">
         </section>
     </main>
+ 
+    <!-- Bootstrap JavaScript (Bundle) -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
 
     <script>
         function changeLanguage(lang) {
@@ -121,7 +125,7 @@
                 videoElement.classList.add('col');
                 videoElement.innerHTML = `
                 <div class="card h-100 shadow filter-card">
-                    <img src="${videoThumbnailUrl}" class="card-img-top img-fluid" alt="${videoTitle}" data-bs-toggle="modal" data-bs-target="#videoModal_${videoId}">
+                    <img src="${videoThumbnailUrl}" loading="lazy" class="card-img-top img-fluid" alt="${videoTitle}" data-bs-toggle="modal" data-bs-target="#videoModal_${videoId}">
                     <div class="card-body">
                         <p class="card-title"><a href="${videoUrl}" data-bs-toggle="modal" data-bs-target="#videoModal_${videoId}">${videoTitle}</a></p>
                         <div class="infos txt_gray1 d-flex justify-content-between align-items-center">
@@ -136,7 +140,7 @@
                         <div class="modal-content">
                             <div class="modal-header justify-content-between align-items-center">
                                 <div>
-                                    <small class="txt_gray1 d-block">${playlistName}</small>
+                                    <small class="infos txt_gray1 d-block">${playlistName} | <a href="https://www.youtube.com/${videoChannelId}" target="_blank"><i class="fa-brands fa-youtube"></i> ${videoChannelId}</a></small>
                                     <h5 class="modal-title" id="videoModalLabel">${videoTitle}</h5>
                                 </div>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -165,25 +169,31 @@
         });
 
     })
-    .catch(error => console.error('Erreur lors du chargement du fichier JSON :', error));
+    .then(() => {
+        const modals = document.querySelectorAll('.modal');
 
-    document.addEventListener('DOMContentLoaded', () => {
-    // Écouteur d'événements pour tous les modals
-    document.querySelectorAll('.modal').forEach(modal => {
-        modal.addEventListener('hidden.bs.modal', () => {
-            // Cherche les vidéos dans le modal actuel
-            const videos = modal.querySelectorAll('video');
-            videos.forEach(video => {
-                video.pause(); // Met en pause
-                video.currentTime = 0; // Réinitialise à 0
+        modals.forEach(modal => {
+            // Lorsque la modale est affichée
+            modal.addEventListener('shown.bs.modal', () => {
+                const videos = modal.querySelectorAll('video');
+                videos.forEach(video => {
+                    video.play(); // Jouer toutes les vidéos dans la modale
+                });
+            });
+
+            // Lorsque la modale est cachée
+            modal.addEventListener('hidden.bs.modal', () => {
+                const videos = modal.querySelectorAll('video');
+                videos.forEach(video => {
+                    video.pause(); // Mettre en pause la vidéo
+                    video.currentTime = 0; // Réinitialiser la vidéo au début
+                });
             });
         });
-    });
-});
-
+    })
+    .catch(error => console.error('Erreur lors du chargement du fichier JSON :', error));
+   
     </script>
-    <!-- Bootstrap JavaScript (Bundle) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-
+   
 </body>
 </html>
