@@ -18,19 +18,21 @@
 </head>
 <body>
     <header class="navbar fixed-top">
-        <div class="container">
-        <div class="d-flex align-items-center mb-3 mb-md-0 me-md-auto">
-            <img src="images/logos/logo_obeo.svg" width="154" height="40" alt="Logo Obeo">
-        </div>
-        <div>
-            <div class="flags">
-                <img src="images/flags/flag_fr.png" alt="French" onclick="changeLanguage('fr')" />
-                <img src="images/flags/flag_en.png" alt="English" onclick="changeLanguage('en')" />
+        <div class="container py-1">
+            <div class="d-flex align-items-center mb-3 mb-md-0 me-md-auto">
+                <a href=""><img src="images/logos/logo_obeo.svg" width="154" height="40" alt="Logo Obeo"></a>
             </div>
-            <div class="contact">
-                <a class="btn" href="https://www.obeosoft.com/en/contact" target="_blank">Contact</a>
+            <div>
+                <div class="flags d-flex justify-content-end mb-2">
+                    <img src="images/flags/flag_fr.png" alt="French" onclick="changeLanguage('fr')" />
+                    <img src="images/flags/flag_en.png" alt="English" onclick="changeLanguage('en')" />
+                </div>                
+                <ul class="nav nav-pills">
+                    <li class="nav-item contact ps-3">
+                        <a class="nav-link active" href="https://www.obeosoft.com/en/contact" target="_blank">Contact</a>
+                    </li>
+                </ul>
             </div>
-        </div>
     </div>
     </header>
     <main class="bd-content vstack gap-3 my-5 scroll">

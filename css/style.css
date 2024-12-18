@@ -12,7 +12,7 @@ header {
     background-color: #ffffff;
     border-bottom: 1px solid #dedede;
 }
-h1, h5{
+h1, h2, h3, h4, h5{
     color: #002B3C;
     font-weight: 700;
 }
@@ -32,6 +32,7 @@ a {
 }
 .btn, .btn-outline-primary:hover {
     border: 2px solid #fbb800;
+    border-radius: 0;
     background-color: #fbb800 ; 
     color: #002B3C;
 }
@@ -46,12 +47,33 @@ a {
 h1, .card-title a, .infos a, .accordion-button:not(.collapsed){color: #002B3C}
 .card {border: none;}
 
-.contact a.btn {
-    border: 2px solid #002b3c;
-    background: #002b3c;
-    color: #ffffff;
-    margin-top: 20px;
+.nav-item a {
+    font-weight: 600;
+    color: #002b3c;
+    border-bottom: 3px solid transparent;
+    border-radius: 0;
 }
+.nav-item a:hover {
+border-bottom: 3px solid #badfe1;
+border-radius: 0;
+color: #007788;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #002B3C;
+    color: #fbb800;
+    border-bottom: 0 solid transparent;
+    border-radius: 0;
+
+}
+
+.nav-pills .nav-link.active:hover {
+    background-color: #fbb800;
+    color: #002B3C;
+    border-bottom: 0;
+}
+.nav-link {transition: none;}
+
 .flags, .duration {
     display: flex;
     gap: 20px;
