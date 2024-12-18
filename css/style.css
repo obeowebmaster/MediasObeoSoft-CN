@@ -45,7 +45,6 @@ a {
 .accordion-button, .accordion-button::after {color: #fbb800;}
 h1, .card-title a, .infos a, .accordion-button:not(.collapsed){color: #002B3C}
 .card {border: none;}
-.logo img {width: 220px;}
 
 .contact a.btn {
     border: 2px solid #002b3c;
