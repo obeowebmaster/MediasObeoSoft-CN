@@ -77,17 +77,6 @@
     "duration": "1:00"
   },
   {
-    "title": "SysON Overview in Japanese | SysONの概要",
-    "description": "このビデオでは、しぞんの簡単なデモと、私たちの主要な指針について説明します。\n ・最新の技術スタック\n ・オープンソースモデル\n ・基盤となる機能\n\nhttps://mbse-syson.org/",
-    "yt_channel_id": "@EclipseSysON",
-    "video_id": "nXgnp3EvxkA",
-    "playlist": "Demos",
-    "playlist_id": "PLavBhTZ41hHxAQaTQdHp_pATh3Zs2-0NW",
-    "thumbnail": "nXgnp3EvxkA.webp",
-    "playlist_index": 12,
-    "duration": "5:02"
-  },
-  {
     "title": "SysON 2025.6 | Manage Visibility",
     "description": "",
     "yt_channel_id": "@EclipseSysON",
