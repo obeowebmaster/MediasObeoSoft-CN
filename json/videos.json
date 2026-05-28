@@ -132,6 +132,17 @@
     "duration": "4:16"
   },
   {
+    "title": "Obeo Enterprise for Poosl 2026.1 | RAW Demo",
+    "description": "This video whows the integration between Poosl and Capella.<br>Learn more: https://www.obeosoft.com/en/products/obeo-enterprise-for-poosl/",
+    "yt_channel_id": "@obeocorp",
+    "video_id": "V7qMTvugRho",
+    "playlist": "Capella - Solutions by Obeo",
+    "playlist_id": "PLDCKzuGIN_ZxcuMhfNWU16ITkoCYLjWba",
+    "thumbnail": "V7qMTvugRho.webp",
+    "playlist_index": 38,
+    "duration": "1:49"
+  },
+  {
     "title": "Capella Models Easily Accessible to Your Teams & Partners | Publication for Capella",
     "description": "Publication for Capella provides a seamlessly integrated view between your system architecture and related engineering activities (IVVQ, Requirements, etc...).<br><br>https://www.obeosoft.com/p4c",
     "yt_channel_id": "@obeocorp",
@@ -141,6 +152,39 @@
     "thumbnail": "2txUCUqlpo.webp",
     "playlist_index": 1,
     "duration": "2:00"
+  },
+  {
+    "title": "Practice in COMAC to Conduct MBSA in Avionics System Based on Capella | COMAC-PGM | Capella Webinar",
+    "description": "Presented by Renfei Xu (PGM) & Hu Po (COMAC)<br>Hosted by Romain Horcada & Renfei Xu<br><br> Webinar in Mandarin.<br><br>***<br>Capella brings significant advantages to transport and infrastructure projects through its use of the ARCADIA framework. This includes structured use of Physical Architecture Nodes, Behavioural Components, and Functional Chains, enabling clear modelling of system behaviour and interfaces. The REC/RPL paradigm supports rapid scaling of models with repeated elements, common in infrastructure and transport systems, while functional and component exchanges naturally reflect logical and physical interface patterns. These features provide a solid foundation for interface documentation, further enhanced by Capella’s document generation capability, which enables efficient, repeatable production of artefacts at scale where many documents need to be produced.<br><br>中国商飞是世界领先的民航客机供应商，其航电系统的架构设计主要依托Capella开展。在本期分享中，我们将介绍商飞是如何基于Capella的扩展开展符合4761的MBSA工作的。商飞的MBSA实践包括了对失效状态的定义、基于功能-逻辑-物理组件的失效传播建模、故障树的自动生成、基于最小割集分析结果的安全性分析等。<br><br>Presentation slides: https://mbse-capella.org/resources/pdf/webinars/20260512_CapellaWebinar_Slides_Speaker.pdf<br><br>***<br>Stay up to date on Capella news and events by following our socials here:<br><br>Website: https://www.eclipse.org/capella/<br>LinkedIn : https://www.linkedin.com/in/capella-mbse-tool/  <br>Capella Forum: https://forum.mbse-capella.org/<br><br>***<br>Chapters:<br>0:00 - Introduction & Abstract<br>0:20 - 简介<br>1:55 - 背景<br>8:10 - COMSPЕС<br>20:32 - Demo演示<br>28:35 - 总结<br>30:22 - Q&A : AI来了。会对商飞的digital twin的开发有什么影响？<br>31:51 - Q&A : capella建模现在感觉太慢了，太严谨了，有没有办法半自动化建模，或者基于特定表格自动建模，对于普通工程师来绘制有点慢<br>32:55 - Q&A : 类似medini等都开放接口到AI了，capella这里有动静吗<br>33:51 - Outro<br>***",
+    "yt_channel_id": "@EclipseCapella",
+    "video_id": "hlsHRev8Edo",
+    "playlist": "Capella Webinars",
+    "playlist_id": "PLfrEYVpSGVLxEFRODSWUTP8N5i3NTG4o-",
+    "thumbnail": "hlsHRev8Edo.webp",
+    "playlist_index": 1,
+    "duration": "34:08"
+  },
+   {
+    "title": "Capella in Transport and Infrastructure | Tim Carter | Capella Webinar",
+    "description": "Presented by Tim Carter<br>Hosted by Romain Horcada<br><br>***<br>Capella brings significant advantages to transport and infrastructure projects through its use of the ARCADIA framework. This includes structured use of Physical Architecture Nodes, Behavioural Components, and Functional Chains, enabling clear modelling of system behaviour and interfaces. The REC/RPL paradigm supports rapid scaling of models with repeated elements, common in infrastructure and transport systems, while functional and component exchanges naturally reflect logical and physical interface patterns. These features provide a solid foundation for interface documentation, further enhanced by Capella’s document generation capability, which enables efficient, repeatable production of artefacts at scale where many documents need to be produced.<br><br>Presentation slides: https://mbse-capella.org/resources/pdf/webinars/20250923_CapellaWebinar_Slides_Speaker.pdf<br><br>***<br>Stay up to date on Capella news and events by following our socials here:<br><br>Website: https://www.eclipse.org/capella/<br>LinkedIn : https://www.linkedin.com/in/capella-mbse-tool/  <br>Capella Forum: https://forum.mbse-capella.org/<br><br>***<br>Chapters:<br>0:00 - Introduction & Abstract<br>0:48 - Arcadia Overview<br>5:39 - Operational Analysis (OA) Overview<br>7:23 - System Analysis (SA) Overview<br>9:02 - Logical Architecture (LA) Overview<br>15:12 - Physical Architecture (PA)<br>17:47 - Arcadia Recursively Masters Complex Systems<br>18:35 - PA in Transport and Infrastructure<br>22:17 - A relevant Transport and Infrastructure Example<br>47:02 - Conclusion <br>47:23 - Q&A : What the proportion is between automated and manual contributions from system architects?<br>48:31 - Q&A : Is the logical layer in this project simple?<br>50:04 - Q&A : Tips for getting model information reviewed and approved?<br>51:22 - Q&A : Can you elaborate on why physical architecture is most important here?<br>53:24 - Q&A : How do modes and states affect functions and chains in diagrams, especially for trains?<br>54:41 - Outro<br>***",
+    "yt_channel_id": "@EclipseCapella",
+    "video_id": "IQvN8CLfOJo",
+    "playlist": "Capella Webinars",
+    "playlist_id": "PLfrEYVpSGVLxEFRODSWUTP8N5i3NTG4o-",
+    "thumbnail": "IQvN8CLfOJo.webp",
+    "playlist_index": 2,
+    "duration": "55:01"
+  },
+   {
+    "title": "How-to Model a Logical Architecture with Capella | Clarity SE | Capella Webinar",
+    "description": "Presented by Tim Carter from Clarity SE<br>Hosted by Romain Horcada<br><br>***<br>While it is easy to conceptualise the final synthesised physical architecture and the black-box system analysis, logical architectures, by their nature, are abstract and more open to interpretation.<br><br>In this presentation, Tim Carter will explore a number of different interpretations of the ARCADIA logical architecture and in which scenarios they may be useful in achieving modelling goals and adding value. <br><br>Slides : https://mbse-capella.org/resources/pdf/webinars/20260324_CapellaWebinar_Slides_Speaker.pdf<br><br>***<br>Stay up to date on Capella news and events by following our socials here:<br><br>Website: https://www.eclipse.org/capella/<br>LinkedIn : https://www.linkedin.com/in/capella-mbse-tool/  <br>Capella Forum: https://forum.mbse-capella.org/<br><br>***<br>Chapters:<br>0:00 - Introduction & Abstract <br>0:53 - Arcadia Overview<br>8:14 - A word about Architecture/s<br>13:18 - So what about logical architecture?<br>21:22 - Types of Logical Architecture (LA)<br>41:19 - How to Organise Functions<br>42:38 - How to Organise Functional Chains<br>43:09 - Conclusion<br>45:17 - Q&A : Doesn’t LA also help in fast-evolving domains where tech changes rapidly?<br>46:56 - Q&A : Can a function-to-logical matrix show multiple solutions classes?<br>48:20 - Q&A : Can a logical architecture be used to develop an N2 Interface Matrix?<br>48:48 - Q&A : Example models showing each LA type in a full workflow?<br>50:07 - Q&A : What’s the difference between ARCADIA/MBSE and traditional approaches?<br>54:45 - Q&A : How can we do system-level V&V in this tool?<br>56:39 - Q&A : How best to use LA to coordinate design effort at each layer?<br>59:21 - Q&A : Can I use Capella to model software accordingly to the normative EN50128?<br>1:00:32 - Q&A : Do you have any advice to simplify logical architecture diagrams?<br>1:02:28 - Outro<br>***",
+    "yt_channel_id": "@EclipseCapella",
+    "video_id": "niGHUh-zB7E",
+    "playlist": "Capella Webinars",
+    "playlist_id": "PLfrEYVpSGVLxEFRODSWUTP8N5i3NTG4o-",
+    "thumbnail": "niGHUh-zB7E.webp",
+    "playlist_index": 3,
+    "duration": "1:02:52"
   },
   {
     "title": "MBSE for Two Student Space Robotics Projects | ISAE & SIRI | Capella Webinar",
